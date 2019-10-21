@@ -1,7 +1,7 @@
 # Checkpoint
-1.1 What is a program? instructions
+1.1 What is a program? instructions  
 
-1.2 What is hardware? phsyical components
+1.2 What is hardware? phsyical components  
 
 1.3 List the five major components of a computer system.
 
