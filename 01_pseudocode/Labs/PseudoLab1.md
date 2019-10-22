@@ -34,6 +34,8 @@ Display "Enter the award for first prize."
 Input 1stPrize
 
 Display "The first prize winner will receive "' 1stPrize
+
+ Random single quote should be comma, variable name firstPrize.
 ```
 
 ---
@@ -52,6 +54,10 @@ Input highest
 Set average = low + high/2
 Display "The average is ", average, "."
 
+"low" and "high" are not the correct variables to call. 
+need () for math equation. PEMDAS
+Variables need to be set individually?
+
 ```
 
 ---
@@ -62,6 +68,8 @@ Display "The average is ", average, "."
 Display "Enter the length of the room."
 Input length 
 Declare Integer length
+
+Declare should come before display
 
 ```
 
@@ -84,6 +92,8 @@ Input value3
 
 Display "The sum of numbers is ", sum
 
+set sum should come after variables are set.
+
 ```
 
 ---
@@ -94,6 +104,9 @@ Display "The sum of numbers is ", sum
 Declare Real pi
 Set 3.14159265 = pi
 Display "The value of pi is ". pi
+
+set pi = 3.x / "." should be comma
+
 ```
 
 ---
@@ -106,6 +119,9 @@ Display "Rates of acceleration of an objet in free fall:"
 Display "Earth: ", GRAVITY, " meters per second every second."
 Set GRAVITY = 1.63
 Display "Moon: ", GRAVITY, " meters per second every second."
+
+Gravity should not be constant
+
 ```
 
 ---
