@@ -302,14 +302,96 @@ For each of the following Boolean expressions, decide whether the statement is t
 * wordSmall > wordMedium
 
 * Design a flowchart or pseudocode for a program that accepts three numbers from a user and displays a message if the sum of any two numbers equals the third. 
+```
+start
+  Declarations
+      num first
+      num second
+      num third
+      string MSG = "Got it"
+    GetNum()
+    Calc()
+    Finish()
+  stop
 
+  GetNum()
+    output "Enter three numbers"
+    input first, second, third
+  return
+
+  Calc()
+    if first + second = third or
+      second + third = first or 
+      first + third = second
+      output MSG
+    end if
+return
+```
 * ShoppingBay is an online auction service that requires several reports. Data for each auctioned item includes an ID number, item description, length of auction in days, and minimum required bid. Design a flowchart or pseudocode for the following: 
 
   * A program that accepts data for one auctioned item. Display data for an auction only if the minimum required bid is more than $250.00. 
+```
+class shoppingBay()
+  start
+    declarations
+      num IDnum
+      str description
+      num lenDays
+      real minBid
+    GetID()
+    GetDesc()
+    GetDays()
+    GetBid()
+
+    GetID()
+      output "Enter ID number"
+      input IDnum
+    return
+
+    GetDesc()
+      output "Enter Item Description"
+      input description
+    return
+
+    GetDays()
+      output "Enter auction length in days"
+      input lendays
+    return
+
+    GetBid()
+      output "Enter Current bid"
+      input minBid
+    return
+
+    set infoFull = [IDnum, description, lenDays, minBid]
+    if minBid >= 250.01 then
+      display infoFull
+  end class
+  ```
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
+  ```
+  from shoppingBay import *
+
+  while True
+    if minBid >= 300.01 then
+      display infoFull
+
+  ```
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
+  ```
+  from shoppingBay import *
+
+  for e in minBid:
+    if each == 0 AND lenDays <= 7
+      then print infoFull
+  ```
   * A program that continuously accepts auction data and displays data for every auction in which the length is between 14 and 28 days inclusive. 
+  ```
+  ```
   * A program that prompts the user for a maximum required bid, and then continuously accepts auction data and displays data for every auction in which the minimum bid is less than or equal to the amount entered by the user.
+```
+
+```
 
 * The Drive-Rite Insurance Company provides automobile insurance policies for drivers. Design a flowchart or pseudocode for the following: 
   * A program that accepts insurance policy data, including a policy number, customer last name, customer first name, age, premium due date (month, day, and year), and number of driver accidents in the last three years. If an entered policy number is not between 1000 and 9999 inclusive, set the policy number to O. If the month is not between 1 and 12 inclusive, or the day is not correct for the month (for example, not between 1 and 31 for January or 1 and 29 for February), set the month, day, and year to 0. Display the policy data after any revisions have been made. 
