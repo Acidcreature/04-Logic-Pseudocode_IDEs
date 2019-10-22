@@ -1,22 +1,33 @@
 # Checkpoint
-4.1 What is a control structure?
+4.1 What is a control structure? Organized and Easy to follow, Logical.
 
-4.2 What is a decision structure?
+4.2 What is a decision structure? Set structure with options.
 
-4.3What is a single alternative decision structure?
+4.3What is a single alternative decision structure? Follows one path but not both
 
-4.4 What is a Boolean expression?
+4.4 What is a Boolean expression? True or False
 
-4.5 What types of relationships between values can you test with relational operators?
+4.5 What types of relationships between values can you test with relational operators?  < > <= >= == !=
 
-4.6 Write a pseudocode If-Then statement that assigns 0 to x if y is equal to 20.
+4.6 Write a pseudocode If-Then statement that assigns 0 to x if y is equal to 20. 
+
+If y == 20 then
+   set x = 0
+end if
 
 4.7 Write a pseudocode If-Then statement that assigns 0.2 to commission if sales is greater than or equal to 10,000.
-4.8 How does a dual alternative decision structure work?
 
-4.9 What statement do you use in pseudocode to write a dual alternative decision structure?
+if sales >= 10000 then
+   set commision = .2
+end if
 
-4.10 When you write an If-Then-Else statement, under what circumstances do the statements that appear between Else and End If execute?
+4.8 How does a dual alternative decision structure work? Accounts for both
+
+4.9 What statement do you use in pseudocode to write a dual alternative decision structure? If then Else
+
+4.10 When you write an If-Then-Else statement, under what circumstances do the statements that appear between Else and End If execute? When the condition is False
+
+
 4.11 If the following pseudocode were an actual program, what would it display?
 ```
 If "z" < "a" Then
@@ -24,6 +35,8 @@ If "z" < "a" Then
 Else
    Display "z is not less than a."
 End If
+
+"Not less than a"
 ```
 4.12 If the following pseudocode were an actual program, what would it display?
 ```
@@ -36,6 +49,8 @@ Else
    Display s1
    Display s2
 End If
+
+Boston, New York
 ```
 
 4.13 How does a dual alternative decision structure work?
