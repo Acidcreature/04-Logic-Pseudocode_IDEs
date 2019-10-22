@@ -2,7 +2,7 @@
 // computing the price of an item on sale for 10% off
 start
    input origPrice
-   discount = origPrice * 0.25
+   discount = origPrice * 0.10
    finalPrice = origPrice - discount
    output finalPrice
 stop
