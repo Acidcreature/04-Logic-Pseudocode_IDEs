@@ -26,35 +26,39 @@ stop
 
 See program below,  the Sales Tax program. This program calculates and displays the county and state sales tax on a purchase. Refactor it so the subtasks are in modules.
 ```
-// Variable declarations
-Declare Real purchase, stateTax, countyTax, totalTax, totalSale
+Start
+    // Variable declarations
+    Declare Real purchase, stateTax, countyTax, totalTax, totalSale
+    // Constants for the state and county tax rates
+    Constant Real STATE_TAX_RATE = 0.04
+    Constant Real COUNTY_TAX_RATE = 0.02
+stop
 
-// Constants for the state and county tax rates
-Constant Real STATE_TAX_RATE = 0.04
-Constant Real COUNTY_TAX_RATE = 0.02
+start
+    purchaseAmount()// Get the amount of the purchase.
+    Display "Enter the amount of the purchase."
+    Input purchase
+stop
 
-// Get the amount of the purchase.
-Display "Enter the amount of the purchase."
-Input purchase
+start
+    taxCalc()// Calculate the state sales tax.
+    Set stateTax = purchase * STATE_TAX_RATE
+    // Calculate the county sales tax.
+    Set countyTax = purchase * COUNTY_TAX_RATE
+    // Calculate the total tax.
+    Set totalTax = stateTax + countyTax
+    // Calculate the total of the sale.
+    Set totalSale = purchase + totalTax
+stop
 
-// Calculate the state sales tax.
-Set stateTax = purchase * STATE_TAX_RATE
-
-// Calculate the county sales tax.
-Set countyTax = purchase * COUNTY_TAX_RATE
-
-// Calculate the total tax.
-Set totalTax = stateTax + countyTax
-
-// Calculate the total of the sale.
-Set totalSale = purchase + totalTax
-
-// Display information about the sale.
-Display "Purchase Amount: $", purchase
-Display "State Tax: ", stateTax
-Display "County Tax: ", countyTax
-Display "Total Tax: ", totalTax
-Display "Sale total: ", totalSale
+start  
+    finalSale()// Display information about the sale.
+    Display "Purchase Amount: $", purchase
+    Display "State Tax: ", stateTax
+    Display "County Tax: ", countyTax
+    Display "Total Tax: ", totalTax
+    Display "Sale total: ", totalSale
+stop
 ```
  
 
