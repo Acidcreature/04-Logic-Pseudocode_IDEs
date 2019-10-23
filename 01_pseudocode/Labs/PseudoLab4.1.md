@@ -8,10 +8,17 @@ Design a modular program that asks the user to enter a distance in kilometers, a
 ```
 //Kilometer Converter
 start
-    output "Please enter distance in Kilometers"
-    kmdist = input
-    miles = kmdist * .6214
-    Display miles
+    //Declarations
+    Declare Real kilometers
+    Declare Real miles
+    Declare Constant KM_TO_MILES = 0.6214
+stop
+
+Conversion()
+    Display "Enter Distance in Kilometers"
+    kilometers = input
+    miles = kilometers * KM_TO_MILES
+    output miles
 stop
 ```
 
@@ -59,6 +66,7 @@ Many financial experts advise that property owners should insure their homes or 
 
 ```
 start
+    ///Declarations
 
 ```
 
