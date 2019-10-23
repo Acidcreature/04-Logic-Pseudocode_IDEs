@@ -1,6 +1,27 @@
 # Exercise Workbench
 * Design a While loop that lets the user enter a number. The number should be multiplied by 10, and the result stored in a variable named product. The loop should iterate as long as product contains a value less than 100.
 
+```
+// Variable to hold user number
+Declare Integer nums
+
+// Variable to number after multiplication
+Declare Integer product
+
+// Constant for Max Number
+Constant Integer MAX_NUM = 100
+
+While product < MAX_NUM
+   Display "Please enter a number between 1-10"
+   input nums
+   product += nums * 10
+End While
+
+   
+
+
+```
+
 * Design a Do-While loop that asks the user to enter two numbers. The numbers should be added and the sum displayed. The loop should ask the user whether he or she wishes to perform the operation again. If so, the loop should repeat; otherwise it should terminate.
 
 * Design a For loop that displays the following set of numbers:
