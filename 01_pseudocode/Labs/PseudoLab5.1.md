@@ -59,6 +59,22 @@ forLoop()
 
 * Design a loop that asks the user to enter a number. The loop should iterate 10 times and keep a running total of the numbers entered.
 
+```
+///Declarations
+Declare Integer nums =[0,0,0,0,0,0,0,0,0,0]
+Declare Integer number
+Declare Integer numtotal
+
+///main
+for i in len(nums)
+   Display "Enter a number"
+   input number
+   numstotal += number
+end for
+Display " your total is $", numstotal
+
+```
+
 * Design a For loop that calculates the total of the following series of numbers:
 ![image](https://user-images.githubusercontent.com/47218880/67423054-31740800-f599-11e9-9565-031c1f729e1c.png)
 
