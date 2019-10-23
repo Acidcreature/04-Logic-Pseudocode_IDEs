@@ -362,19 +362,23 @@ class shoppingBay()
       output "Enter Current bid"
       input minBid
     return
+    InfoFull()
+      set infoFull = [IDnum, description, lenDays, minBid]
 
-    set infoFull = [IDnum, description, lenDays, minBid]
-    if minBid >= 250.01 then
-      display infoFull
+  if minBid >= 250.01 then
+    display InfoFull
   end class
   ```
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
   ```
   from shoppingBay import *
+  getBid()
+  InfoFull()
+  
 
   while True
     if minBid >= 300.01 then
-      display infoFull
+      display InfoFull
 
   ```
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
@@ -383,13 +387,35 @@ class shoppingBay()
 
   for e in minBid:
     if each == 0 AND lenDays <= 7
-      then print infoFull
+      then print InfoFull
   ```
   * A program that continuously accepts auction data and displays data for every auction in which the length is between 14 and 28 days inclusive. 
   ```
+  from shoppingBay import *
+
+  for e in minBid:
+    if each >= 0 AND lenDays >= 14 AND <= 28
+      then print InfoFull
   ```
   * A program that prompts the user for a maximum required bid, and then continuously accepts auction data and displays data for every auction in which the minimum bid is less than or equal to the amount entered by the user.
 ```
+from shoppingBay import *
+Declarations
+  num maxbid
+
+InfoFull()
+GetBid()
+MaxBid()
+  output "Enter Max bid"
+  input maxbid
+return
+
+while True
+  for each in minBid 
+    if minBid <= maxbid
+  print InfoFull
+
+
 
 ```
 
