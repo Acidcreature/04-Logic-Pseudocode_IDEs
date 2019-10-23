@@ -3,6 +3,20 @@
 # Roman Numerals
 
 Design a program that prompts the user to enter a number within the range of 1 through 10. The program should display the Roman numeral version of that number. If the number is outside the range of 1 through 10, the program should display an error message.
+```
+start
+    ///Declarations
+    Declare Integer numInput
+    Declare String romanNum
+stop
+
+start
+    RomanCalc()
+    Display "Please enter a number between 1 through 10"
+    numInput = input
+
+    Select case
+```
 
 
 

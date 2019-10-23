@@ -100,6 +100,8 @@ start
     Declare Real oil
     Declare Real tires
     Declare Real maintenance
+    Call userInput()
+    Call CostPerCar()
 stop
 
 start
@@ -119,10 +121,16 @@ start
 stop
 
 start
+    ///Declarations
+    Declare Real yearlyTires
+    Declare Real monthlyTires
+    Declare Real avgMX
+    Declare Real totalMonth
+    
     CostsPerCar()
     yearlyTires = tires / 2 
     monthlyTires = yearlyTires / 12
-    avgMX = maintenance * 2 
+    avgMX = (maintenance * 2 ) / 12
     totalMonth = loanPayment+insurance+gas+oil+monthlyTires+avgMX
     
     Display "Your monthly car costs are $", totalMonth
