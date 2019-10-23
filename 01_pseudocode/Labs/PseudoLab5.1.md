@@ -60,12 +60,12 @@ forLoop()
 * Design a loop that asks the user to enter a number. The loop should iterate 10 times and keep a running total of the numbers entered.
 
 ```
-///Declarations
+//Declarations
 Declare Integer nums =[0,0,0,0,0,0,0,0,0,0]
 Declare Integer number
 Declare Integer numtotal
 
-///main
+//main
 for i in len(nums)
    Display "Enter a number"
    input number
@@ -77,8 +77,27 @@ Display " your total is $", numstotal
 
 * Design a For loop that calculates the total of the following series of numbers:
 ![image](https://user-images.githubusercontent.com/47218880/67423054-31740800-f599-11e9-9565-031c1f729e1c.png)
-
+```
+//Declare Integer denominator, numerator
+//Declare Real value, total
+Set denominator = 30
+Set total = 0
+For numerator = 1 To 30
+  Set value = numerator / denominator
+  Set total = total + value
+  Set denominator = denominator - 1
+End For
+Display total
+```
 * Design a nested loop that displays 10 rows of # characters. There should be 15 # characters in each row.
+```
+for i in range(10)
+   for e in len(15)
+      Display "#"
+   end for
+end for
+
+```
 
 * Convert the While loop in the following code to a Do-While loop:
 ```
