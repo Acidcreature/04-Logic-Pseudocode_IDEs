@@ -67,12 +67,64 @@ Many financial experts advise that property owners should insure their homes or 
 ```
 start
     ///Declarations
+    Declare Real homeValue
+    Declare CONSTANT INSURANCE = homeValue *.8
+    Declare Real insurCalculated * INSURANCE
+
+stop
+
+InsureCalc()
+    Display "Please enter your Home's Value"
+    homeValue = input
+    insurCalculated = homeValue * INSURANCE
+    output insurCalculated
+stop
+    
 
 ```
 
 ## Automobile Costs
 
 Design a modular program that asks the user to enter the monthly costs for the following expenses incurred from operating his or her automobile: loan payment, insurance, gas, oil, tires, and maintenance. The program should then display the total monthly cost of these expenses, and the total annual cost of these expenses.
+
+```
+start
+    ///Declarations
+    Declare Real loanPayment
+    Declare Real insurance
+    Declare Real gas
+    Declare Real oil
+    Declare Real tires
+    Declare Real maintenance
+stop
+
+start
+    userInput()
+        Display "Please enter your monthly Loan Payment"
+        loanPayment = input
+        Display "Please enter your monthly Insurance Payment"
+        insurance = input
+        Display "Please enter your monthly cost of gas"
+        gas = input
+        Display "Please enter your monthly cost of oil"
+        oil = input
+        Display "Please enter your cost for 1 set of tire"
+        tires = input
+        Display "Please enter your average maintenance costs per visit"
+        maintenance = input
+stop
+
+start
+    CostsPerCar()
+    yearlyTires = tires / 2 
+    monthlyTires = yearlyTires / 12
+    avgMX = maintenance * 2 
+    totalMonth = loanPayment+insurance+gas+oil+monthlyTires+avgMX
+    
+    Display "Your monthly car costs are $", totalMonth
+    Display "Your average yearly costs are $", (totalMonth * 12)
+stop
+```
 
 ## Property Tax
 
