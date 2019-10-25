@@ -4,10 +4,74 @@
 
 
 Design a payroll program that prompts the user to enter an employee’s hourly pay rate and the number of hours worked. Validate the user’s input so that only pay rates in the range of $7.50 through $18.25 and hours in the range of 0 through 40 are accepted. The program should display the employee’s gross pay.
+```
+//Declarations
+Declare Real hourlyPayRate, hoursWorked
+
+//User Input
+Display "enter your hourly pay rate"
+input hourlyPayRate
+Display "Enter the number of hours worked"
+input hoursWorked
+
+//Call on function
+Call inputValidation(hourlyPayRate, hoursWorked)
+
+//Input Validation
+Function String inputValidation(hourlyPayRate, hoursWorked)
+	While hourlyPayRate < 7.5 or hourlyPayRate > 18.25
+		Display "Your hourly pay rate is invalid, Try again"
+		input hourlyPayRate
+	end while
+	While hoursWorked < 0 or hoursWorked > 40
+		Display "Number of hours worked is invalid, Try again"
+		input hoursWorked
+	end while
+	return hourlyPayRate, hoursWorked
+end function
+```
 
 ## Theater Seating Revenue with Input Validation
 
 A dramatic theater has three seating sections, and it charges the following prices for tickets in each section: section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each. The theater has 300 seats in section A, 500 seats in section B, and 200 seats in section C. Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. The program should validate the numbers that are entered for each section.
+```
+//Declarations
+Declare Int sectionASeats, sectionBSeats, sectionCSeats
+Declare Constant Integer SECTION_A = 20
+Declare Constant Integer SECTION_B = 15
+Declare Constant Integer SECTION_C = 10
+
+//User Input
+Display "How many seats were seated in Section A"
+input sectionASeats
+Display "How many seats were seated in Section B"
+input sectionBSeats
+Display "How many seats were seated in Section C"
+input sectionCSeats
+
+//Input Validation
+Call inputValidation(sectionASeats, sectionBSeats, SectionCSeats)
+
+Function Integer inputValidation(sectionASeats, sectionBSeats,sectionCSeats)
+	While sectionAseats > 300 or sectionASeats < 0
+		Display "Number of seats is invalid, Try again"
+		input sectionASeats
+	end while
+	While sectionBSeats > 500 or sectionBSeats < 0
+		Display "Number of seats is invalid, Try again"
+		input sectionBSeats
+	end while
+	While sectionCSeats > 200 or sectionCSeats < 0
+		Display "Number of seats is invalid, Try again"
+	return sectionASeats, sectionBSeats, sectionCSeats
+end function
+
+//Revenue Calculator
+Display "Section A made $", (sectionASeats * SECTION_A)
+Display "Section B made $", (sectionBSeats * SECTION_B)
+Display "Section C made $", (sectionCSeats * SECTION_C)
+```
+
 
 ## Fat Gram Calculator
 
@@ -62,6 +126,7 @@ End Module
 Module getNumber(Integer Ref inputAnswer)
 		Display “Enter 1 for rock, 2 for paper, 3 for scissors:  “
 		Input inputAnswer
+		call inputValidation(inputAnswer)
 End Module
 
 // The showWinner module shows if number is a prime
@@ -148,4 +213,14 @@ End If
 	Return 0
 
 End Function
+
+//Input Validation
+Function Integer inputValidation(inputAnswer)
+	While inputAnswer != 1 and != 2 and != 3 
+		Display "Selection invalid, Try again"
+		input inputAnswer
+	end while
+	return inputAnswer
+end function
+
 ```
