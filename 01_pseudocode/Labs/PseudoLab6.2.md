@@ -3,14 +3,83 @@
 ## Total Sales
 
 Design a program that asks the user to enter a store’s sales for each day of the week. The amounts should be stored in an array. Use a loop to calculate the total sales for the week and display the result.
+```
+//Declarations
+Declare int SIZE = 7
+Declare Real sales[SIZE]
+
+for index = 0 to SIZE -1
+    Display "Please enter daily sales amount" index + 1
+    input sales[]
+end for
+Display (sales[0] + sales[1] + sales[2] + sales[3] + sales[4] + sales[5] + sales[6])
+```
 
 ## Lottery Number Generator
 
 Design a program that generates a 7-digit lottery number. The program should have an Integer array with 7 elements. Write a loop that steps through the array, randomly generating a number in the range of 0 through 9 for each element. Then write another loop that displays the contents of the array.
+```
+//Declarations
+Declare int SIZE = 7
+Declare int lottoNums[SIZE]
+
+//Import module random
+import module random
+
+for index = 0 to SIZE - 1  
+    set lottonums = random(0,9)
+end for
+
+for each in lottoNums
+    Display "The wining lotto numbers are $", lottonums[0:6]
+end for
+    
+```
 
 ## Rainfall Statistics
 
 Design a program that lets the user enter the total rainfall for each of 12 months into an array. The program should calculate and display the total rainfall for the year, the average monthly rainfall, and the months with the highest and lowest amounts.
+
+```
+//Declarations 
+Declare int SIZE = 12
+Declare real rainFall[SIZE]
+Declare real rain = 0.0
+Declare real highRain = 0.0
+Declare real lowRain = 0.0
+Declare real num
+
+//User Input
+for index = 0 to SIZE -1
+    Display "Please enter in monthly rainfall amounts"
+    input rainfall[index]
+end for
+
+//Calculations
+for index = 0 to rainFall -1
+    rain += index
+    Display "The total rainfall is $", rainfall
+    Display "The average monthly rainfall is $", (rain / 12)
+end for
+
+for each num in rainFall
+    if num > highRain
+        set highRain = num
+    else
+        continue
+    Display "The highest amount of rain is $", highRain
+    set lowRain = highRain
+end for
+
+for each num in rainFall
+    if num < lowRain
+        set lowRain = num
+    else
+        continue
+    Display "The lowest amount of rain is $", lowRain
+end for
+
+```
 
 ## Number Analysis Program
 
@@ -23,6 +92,26 @@ The highest number in the array
 The total of the numbers in the array
 
 The average of the numbers in the array
+
+//Declarations
+Declare int SIZE = 20
+Declare int userNum[SIZE]
+Declare int lowlow
+Declare int highigh
+declare int totestotes
+
+for index = 0 - SIZE - 1
+    Display "Please enter a number"
+    input userNum[index]
+end for
+
+//Calculations
+for index = 0 to userNum -1
+    totestotes += index
+    Display "The total of all numbers is $", totestotes
+    Display "The average monthly rainfall is $", (rain / 12)
+end for
+
 ```
 
 ## Charge Account Validation
